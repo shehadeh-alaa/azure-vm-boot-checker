@@ -56,3 +56,8 @@ vm_boot_report.csv – Structured CSV for Excel with flag:
 Azure CLI installed and logged in (az login)
 Bash-compatible shell (e.g., Git Bash, WSL, Linux)
 Access to run-command permissions on target VMs
+
+## 🖼️ Screenshots
+
+### Terminal Output
+![CLI Output](screenshots/cli-output.png)
