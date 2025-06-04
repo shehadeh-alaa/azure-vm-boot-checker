@@ -20,6 +20,7 @@ This will not work if the VM was live migrated (didn’t reboot).
 - Retrieves boot time via `az vm run-command`
 - Converts time to UTC
 -	Gracefully handles Ctrl+C
+-	Adds a 2-minute timeout per VM to avoid hanging if a command gets stuck (Extension execution timeout is 90 minutes)
 - Optional: Flag VMs that rebooted within a given outage window
 - Outputs results to both:
   - `vm_boot_report.txt` (human-friendly)
