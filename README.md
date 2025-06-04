@@ -32,8 +32,9 @@ Options:
 | `--start`          | Start time of outage window (`YYYY-MM-DD HH:MM[:SS]`) |
 | `--end`            | End time of outage window (`YYYY-MM-DD HH:MM[:SS]`)   |
 
+```
 
-Example:
+### Example:
 
 ./get_vm_boot_utc_v1-4.sh \
   --region northeurope \
@@ -52,7 +53,7 @@ vm_boot_report.csv – Structured CSV for Excel with flag:
 | N/A   | VM not running or no window specified |
 
 
-🔒 Requirements
+## 🔒 Requirements
 Azure CLI installed and logged in (az login)
 Bash-compatible shell (e.g., Git Bash, WSL, Linux)
 Access to run-command permissions on target VMs
