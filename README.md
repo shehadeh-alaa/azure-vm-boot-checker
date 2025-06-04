@@ -3,8 +3,10 @@
 This Bash script retrieves the last boot time (in UTC) of all or selected Azure virtual machines in a subscription, allowing you to determine if a VM was rebooted during a known outage window.
 
 This is mainly for:
-•	Quickly identifying which VMs were restarted during a platform event
-•	Verifying VM behavior when Azure doesn’t log platform-initiated restarts in Activity Logs
+
+Quickly identifying which VMs were restarted during a platform event
+
+Verifying VM behavior when Azure doesn’t log platform-initiated restarts in Activity Logs
 
 This will not work if the VM was live migrated (didn’t reboot).
 
