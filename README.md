@@ -18,8 +18,9 @@ This will not work if the VM was live migrated (didn’t reboot).
   - Subscriptions
 - Detects VM power state
 - Retrieves boot time via `az vm run-command`
+- Works with both Linux and Windows VMs (not hardened OSs)
 - Converts time to UTC
--	Gracefully handles Ctrl+C
+-	Gracefully handles Ctrl+C interrupt
 -	Adds a 2-minute timeout per VM to avoid hanging if a command gets stuck (Extension execution timeout is 90 minutes)
 - Optional: Flag VMs that rebooted within a given outage window
 - Outputs results to both:
