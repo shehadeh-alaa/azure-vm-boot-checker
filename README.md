@@ -2,7 +2,13 @@
 
 This Bash script retrieves the last boot time (in UTC) of all or selected Azure virtual machines in a subscription, allowing you to determine if a VM was rebooted during a known outage window.
 
-## 🔧 Features
+This is mainly for:
+•	Quickly identifying which VMs were restarted during a platform event
+•	Verifying VM behavior when Azure doesn’t log platform-initiated restarts in Activity Logs
+
+This will not work if the VM was live migrated (didn’t reboot).
+
+## Features
 
 - Checks Azure VMs across all or specific:
   - Regions
@@ -11,12 +17,13 @@ This Bash script retrieves the last boot time (in UTC) of all or selected Azure 
 - Detects VM power state
 - Retrieves boot time via `az vm run-command`
 - Converts time to UTC
+-	Gracefully handles Ctrl+C
 - Optional: Flag VMs that rebooted within a given outage window
 - Outputs results to both:
   - `vm_boot_report.txt` (human-friendly)
   - `vm_boot_report.csv` (Excel-friendly)
 
-## 🚀 Usage
+## Usage
 
 ```bash
 ./get_vm_boot_utc_v1-4.sh [options]
@@ -42,7 +49,7 @@ Options:
   --end "2025-06-04 10:14"
 
 
-📁 Output Files
+Output Files
 vm_boot_report.txt – Pipe-delimited, readable in CLI
 vm_boot_report.csv – Structured CSV for Excel with flag:
 
@@ -53,12 +60,12 @@ vm_boot_report.csv – Structured CSV for Excel with flag:
 | N/A   | VM not running or no window specified |
 
 
-## 🔒 Requirements
+## Requirements
 Azure CLI installed and logged in (az login)
 Bash-compatible shell (e.g., Git Bash, WSL, Linux)
 Access to run-command permissions on target VMs
 
-## 🖼️ Screenshots
+## Screenshots
 
 ### Terminal Output
 ![CLI Output](screenshots/cli-output.png)
