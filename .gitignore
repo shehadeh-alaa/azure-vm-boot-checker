@@ -1,0 +1,14 @@
+# Temporary files
+*.swp
+*.tmp
+*.bak
+*.log
+*.out
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Output reports
+vm_boot_report.txt
+vm_boot_report.csv
