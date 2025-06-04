@@ -4,9 +4,9 @@ This Bash script retrieves the last boot time (in UTC) of all or selected Azure 
 
 This is mainly for:
 
-Quickly identifying which VMs were restarted during a platform event
+- Quickly identifying which VMs were restarted during a platform event
 
-Verifying VM behavior when Azure doesn’t log platform-initiated restarts in Activity Logs
+- Verifying VM behavior when Azure doesn’t log platform-initiated restarts in Activity Logs
 
 This will not work if the VM was live migrated (didn’t reboot).
 
